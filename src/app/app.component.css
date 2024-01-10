@@ -1,0 +1,24 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+
+.full-screen-background {
+    background-image: url('../assets/wallpaper.jpg');
+    /* Pfad zu Ihrem Bild */
+    background-size: cover;
+    /* Stellt sicher, dass das Bild den gesamten Bereich abdeckt */
+    background-position: center;
+    /* Zentriert das Bild */
+    background-repeat: no-repeat;
+    /* Verhindert das Wiederholen des Bildes */
+    height: 100vh;
+    /* Setzt die Höhe auf die volle Bildschirmhöhe */
+    width: 100vw;
+    /* Setzt die Breite auf die volle Bildschirmbreite */
+}
