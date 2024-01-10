@@ -1,22 +1,26 @@
-<div class="container">
+<div class="container" [ngClass]="{' loggedIn': isLoggedIn}" >
     <div class="content-container">
         <div class="logo-container">
-            <img src="../../assets/logo.png" class="logo" alt="">
+            <img src="../../assets/logo.png" class="logo" alt="" [ngClass]="{' box-glow': isLoading}">
         </div>
         <div class="form-floating mb-3 " data-bs-theme="dark">
-            <input type="email" class="form-control flat-label-input" id="floatingInput" placeholder="">
+            <input type="text" class="form-control flat-label-input" id="floatingInput" placeholder="" [disabled]="isLoading">
             <label for="floatingInput">Username</label>
         </div>
         <div class="form-floating ">
-            <input type="password" class="form-control flat-label-input" id="floatingPassword" placeholder="">
+            <input type="password" class="form-control flat-label-input" id="floatingPassword" placeholder="" [disabled]="isLoading">
             <label for="floatingPassword">Password</label>
             <span style="color: white; float: right; cursor: pointer;">Forgot Password? </span>
         </div>
-        <button type="button" class="btn btn-outline-light login-btn button-glow-on-hover"
-            (click)="login()">Login</button>
-        <div style="margin-top: 10px;">
-            <span style="color: white;">Dont have an account? <span
-                    style="color: rgb(132, 132, 255); cursor: pointer;">Create</span></span>
-        </div>
+
+        <button type="button" class="btn btn-outline-light login-btn button-glow-on-hover shake" (click)="login()" [disabled]="isLoading">
+            <span class="spinner-border spinner-border-sm" aria-hidden="true" *ngIf="isLoading"></span>
+            <span *ngIf="!isLoading">Login</span>
+        </button>
+    </div>
+
+    <div style="margin-top: 10px;">
+        <span style="color: white;">Dont have an account? <span
+                style="color: rgb(132, 132, 255); cursor: pointer;">Create</span></span>
     </div>
 </div>
