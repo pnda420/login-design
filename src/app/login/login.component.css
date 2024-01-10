@@ -9,70 +9,92 @@
 }
 
 
-.labels-container{
+.content-container {
+    color: white;
 }
 
-.login-btn{
+.login-btn {
     margin-top: 50px;
     width: 100%;
 }
 
 .btn-outline-light.login-btn {
     border-color: rgba(255, 255, 255, 0.2);
-    border-width:2px;
+    border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-}   
+}
 
-.logo{
+.logo {
     width: 200px;
 }
 
-.logo-container{
+.logo-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
 
-::ng-deep.flat-label-input{
-        opacity: 0.2;
-        background-color: rgb(174, 174, 174);
+::ng-deep .flat-label-input {
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 
-   .form-floating {
-       background-color: transparent;
-       color: white;
-   }
+.form-control:focus {
+    border-color: #C30068;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
 
 
-   .form-control.flat-label-input {
-       background-color: transparent;
-       color: white;
-       border: 2px solid white;
-   }
+.form-floating {
+    background-color: transparent;
+    color: white;
+}
 
-   .form-control.flat-label-input::placeholder {
-       color: white;
-   }
 
-   .form-control.flat-label-input:focus {
-       background-color: transparent;
-       color: white;
-   }
+.form-control.flat-label-input {
+    background-color: transparent;
+    color: white;
+}
 
-   .form-floating label {
-       color: white;
-       background-color: transparent;
-       /* Label-Hintergrund transparent setzen */
-   }
+.form-control.flat-label-input::placeholder {
+    color: white;
+}
 
-   .form-floating .form-control:focus~label {
-       background-color: transparent;
-       /* Label-Hintergrund transparent setzen, wenn das Feld fokussiert ist */
-   }
+.form-control.flat-label-input:focus {
+    background-color: transparent;
+    color: white;
+}
 
-   ::ng-deep label::after {
+.form-floating label {
+    color: white;
+    background-color: transparent;
+    /* Label-Hintergrund transparent setzen */
+}
+
+.form-floating .form-control:focus~label {
+    background-color: transparent;
+    /* Label-Hintergrund transparent setzen, wenn das Feld fokussiert ist */
+}
+
+::ng-deep label::after {
     background-color: transparent !important;
-   }
+}
+
+/* GLOWONHOVER */
+.button-glow-on-hover {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.button-glow-on-hover:hover {
+    border-color: #C30068;
+    box-shadow: inset 0 1px 10px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+    background-color: transparent;
+    color: white;
+}
+
+.button-glow-on-hover:active {
+    background-color: white;
+    color: black;
+}
