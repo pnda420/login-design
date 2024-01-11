@@ -10,8 +10,19 @@
         <div class="form-floating ">
             <input type="password" class="form-control flat-label-input" id="floatingPassword" placeholder="" [disabled]="isLoading">
             <label for="floatingPassword">Password</label>
-            <span style="color: white; float: right; cursor: pointer;">Forgot Password? </span>
+            <div style="margin-top: 10px;">
+                <span style="color: white; float: right; cursor: pointer;">Forgot Password? </span>
+                <div class="form-check" >
+                    <input class="form-check-input button-glow-on-hover" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      remember me
+                    </label>
+                  </div>
+            </div>
+            
         </div>
+
+        
 
         <button type="button" class="btn btn-outline-light login-btn button-glow-on-hover shake" [ngClass]="{'shake': isWrong}" (click)="login()" [disabled]="isLoading">
             <span class="spinner-border spinner-border-sm" aria-hidden="true" *ngIf="isLoading"></span>

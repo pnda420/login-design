@@ -14,7 +14,7 @@ export class LoginComponent{
   
 
   login() {
-    this.isWrong = true
+   //() this.isWrong = true
     this.isLoading = true;
     setTimeout(() => {
       this.isLoggedIn = true;
