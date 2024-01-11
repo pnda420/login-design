@@ -13,7 +13,7 @@
             <span style="color: white; float: right; cursor: pointer;">Forgot Password? </span>
         </div>
 
-        <button type="button" class="btn btn-outline-light login-btn button-glow-on-hover shake" (click)="login()" [disabled]="isLoading">
+        <button type="button" class="btn btn-outline-light login-btn button-glow-on-hover shake" [ngClass]="{'shake': isWrong}" (click)="login()" [disabled]="isLoading">
             <span class="spinner-border spinner-border-sm" aria-hidden="true" *ngIf="isLoading"></span>
             <span *ngIf="!isLoading">Login</span>
         </button>
